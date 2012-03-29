@@ -11,30 +11,48 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 	color: white;
 	margin: 0px;
-	overflow:hidden;
+	overflow:scroll;
 }
-
-#logo {
-	width: 70%;
-	margin: 10px 15%;
+#container {
+	width: 320px;
+	margin: 0 auto; 
 }
-
-section {
-	background: #666;
+header {
+	margin: 0 auto;
+}
+header img {
+	margin: 0px 20% 0px 20%;
+}
+#search {
+	display: block;
+	margin-bottom: 5px;
+}
+#search input {
+	display: inline;
+	border: 1px solid;
+	border-radius: 25px;
+	vertical-align: middle;
+	width: 235px;
+}
+#search img {
+	width: 60px;
+	height: 18px;
+	vertical-align: middle;
+}
+#CTA {
+	background-image: url('images/calltoaction.jpg');
+	width: 300px;
+	height: 100px;
+	margin: 5px 0px;
+}
+#CTA a {
+	float: right;
+	margin-top: 67px;
+	margin-right: 10px;
+}
+#buttons ul {
+	padding: 0px;
 	margin: 0px;
-	padding: 5px;
-	width: 100%;
-}
-
-p {
-	font-size: 20px;
-	font-weight: bold;
-	text-align: center;
-}
-
-#addPlayerBtn img{
-	width: 75%;
-	margin: 10px 15%;
 }
 
 #pageHeader {
