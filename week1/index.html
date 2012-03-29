@@ -18,7 +18,7 @@
 		<meta name="MobileOptimized" content="320" />
 		
 		<!-- Document Title -->
-		<title> Assignment 1</title>
+		<title>iDRAFT</title>
 		
 		<!-- Link CSS File -->
 		<link rel="stylesheet" type="text/css" href="styles.css" />
@@ -26,17 +26,33 @@
 	</head>
 	<!--Begin Body of html page-->
 	<body id="main-page">
-		<!--Header Section-->
-		<header>
-			<img src="images/logo_image.png" alt="iDRAFT" id="logo" />
-		</header>
-		<!--Section for text-->
-		<section>
-			<p>Kick off your fantasy football season with a great gameplan.  Select the
-				players that you would like to have on your roster on gameday!</p>
-		</section>
+		<div id="container">
+			<!--Header Section-->
+			<header>
+				<img src="images/logo.jpg" alt="iDRAFT" id="logo" />
+			</header>
+			<form action="#" method="post" id="search">
+				<img src="images/search.jpg" alt="search" />
+				<input type="search" name="playersearch" />
+			</form>
+			<!--Call To Action-->
+			<article id="CTA">
+				<!--<img src="images/calltoaction.jpg" alt="Add Player Now" />-->
+				<a href="addPlayer.html" id="addPlayerBtn"><img src="images/addPlayersBtn.jpg" alt="Add Player Now" /></a>
+			</article>
+			<!--List of images for browsing-->
+			<nav id="buttons">
+				<ul>
+					<li><a href="#" id="myplayer"><img src="images/my_players.jpg" alt="My Players"/></a></li>
+					<li><a href="#" id="myplayer"><img src="images/my_leagues.jpg" alt="My Leagues"/></a></li>
+					<li><a href="#" id="myplayer"><img src="images/projections.jpg" alt="Projections"/></a></li>
+					<li><a href="#" id="myplayer"><img src="images/news.jpg" alt="News"/></a></li>
+					<li><a href="#" id="myplayer"><img src="images/injuries.jpg" alt="Injuries"/></a></li>
+				</ul>
+			</nav>
+		</div>
 		<!--Button for starting application-->
-		<a href="addPlayer.html" id="addPlayerBtn"><img src="images/addPlayerUp.jpg" alt="" /></a>
+		<!--<a href="addPlayer.html" id="addPlayerBtn"><img src="images/addPlayerUp.jpg" alt="" /></a>-->
 		<!--Call Javascript File-->
 		<script src="main.js" type="text/javascript"></script>
 	</body>
