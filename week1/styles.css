@@ -137,3 +137,11 @@ footer a:active {
 #players img {
 	width: 100%;
 }
+/******************Coming Soon Page**************/
+#soon {
+	width: 320px;
+	margin: 0 auto;
+}
+#homeBtn {
+	margin: 0px 45px; 
+}
