@@ -16,7 +16,7 @@
 	
 	<!-- StyleSheets under here -->
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
-	<link rel="stylesheet" href="css/style.css" />
+	<!--<link rel="stylesheet" href="css/gold.css" />-->
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
@@ -26,36 +26,19 @@
 
 	<div data-role="page" id="home">
 		
-		<div data-role="header">
-			<h1>MIU Demo Page 1</h1>
+		<div data-role="header" class="header">
+			<h1><img src="images/logo.png" id="logo" alt="" /></h1>
 		</div>
 		
 		<div data-role="content">
-			<ul data-role="listview" data-inset="true">
-				<li>List Item 1</li>
-				<li>List Item 2</li>
-				<li>List Item 3</li>
+			<a href="addPlayer.html" data-ajax="false"><img src="images/calltoaction.png"/></a>
+			<ul data-role="listview" data-filter="true">
+				<li><a href="comingSoon.html" data-ajax="false" >My Players</a></li>
+				<li><a href="#" >My Leagues</a></li>
+				<li><a href="#" >Projections</a></li>
+				<li><a href="#" >News</a></li>
+				<li><a href="#" >Injuries</a></li>
 			</ul>
-		</div>
-		
-		<div data-role="footer" data-position="fixed">
-			<h4>Footer</h4>
-		</div>
-		
-	</div>
-	
-	<div data-role="page" id="page2" data-add-back-btn="true">
-		
-		<div data-role="header">
-			<h1>MIU Demo Page 2</h1>
-		</div>
-		
-		<div data-role="content">
-			<p>This is Page #2</p>
-		</div>
-		
-		<div data-role="footer" data-position="fixed">
-			<h4>Footer</h4>
 		</div>
 		
 	</div>
