@@ -32,38 +32,124 @@
 		</div>
 		
 		<div data-role="content" data-theme="a">
-				<ul data-role='listview' data-theme="b" data-filter="true" data-inset="true">
-					<a href="addPlayer.html" data-ajax="false"><img src="images/calltoaction.png" alt="" id="CTA"/></a>
-					<li>
-						<a href="#players">My Players</a>
-					</li>
-					<li>
-						<a href="#proj">Projections</a>
-					</li>
-					<li>
-						<a href="#news">League News</a>
-					</li>
-
-				</ul>
+			<ul data-role='listview' data-theme="b" data-filter="true" data-inset="true">
+				<a href="addPlayer.html" data-ajax="false"><img src="images/calltoaction.png" alt="" id="CTA"/></a>
+				<li>
+					<a href="#players">My Players</a>
+				</li>
+				<li>
+					<a href="#proj">Projections</a>
+				</li>
+			</ul>
+					
+				<div data-role="collapsible" data-theme="b">
+					<h2>My Leagues</h2>
+							<h3><a href="#comingSoon" data-ajax="false">League 1</a></h3>
+							<h3><a href="#comingSoon" data-ajax="false">League 2</a></h3>
+				</div>
+				
+				<div data-role="collapsible" data-theme="b" data-inset="true">
+				<h2>League News</h2>
+					<ul data-role="listview" data-theme="b" data-inset = "true">
+						<li data-role="list-divider">From Around The NFL</li>
+						<li>
+							<h3><a href="#comingSoon">Notre Dame pro day could valut Floyd Past Blackmon</a></h3>
+							<p>about 20 minutes ago via nfl.com</p>
+						</li>
+						<li>
+							<h3><a href="#comingSoon">Report: Colts might take RG3 over Luck for No. 1 pick</a></h3>
+							<p>about 45 minutes ago via yahoo sports</p>
+						</li>
+						<li>
+							<h3><a href="#comingSoon">Manning Mentor: Colts should draft Luck and "never look back"</a></h3>
+							<p>about 1 hour ago via espn.com</p>
+						</li>
+						<li>
+							<h3><a href="#comingSoon">Browns to host QB Tannehil, RB Richardson, other prospects</a></h3>
+							<p>about 2 hours ago via nfl.com</p>
+						</li>
+						<li data-role="list-divider">Injuries</li>
+						<li>
+							<h3><a href="#comingSoon">Several Patriots out for a stretch</a></h3>
+							<p>about 2 days ago via nfl.com</p>
+						</li>
+						<li>
+							<h3><a href="#comingSoon">Peyton Hillis making a comeback after season long injuries</a></h3>
+							<p>about 3 days ago via Cincinnati Gazette</p>
+						</li>
+					</ul>
+				</div>
 		</div>
+		
+		
 		
 		<div data-role="footer" data-position="fixed" data-theme-content="b">
 			<nav data-role="navbar" >
 				<ul data-theme="b">
-					<li><a href="#home" data-theme="b" data-transition="turn">Home</a></li>
-					<li><a href="gold/index.html" data-ajax="false" data-theme="b" >Gold</a></li>
-					<li><a href="bronze/index.html"  data-ajax="false" data-theme="b">Bronze</a></li>
+					<li><a href="http://jemcphe.github.com/Miu-Site/week2/master/index.html" data-theme="b" data-transition="turn">Home</a></li>
+					<li><a href="http://jemcphe.github.com/Miu-Site/week2/gold/index.html" data-ajax="false" data-theme="b" >Gold</a></li>
+					<li><a href="http://jemcphe.github.com/Miu-Site/week2/bronze/index.html"  data-ajax="false" data-theme="b">Bronze</a></li>
 				</ul>
 			</nav>			
 		</div>	
 	</div>
 <!----------------------------Players Page-------------------------------->
 	<div data-role="page" id="players" data-add-back-btn="#home" data-theme="a">
-		<div data-role="header" data-theme="b">
+		<div data-role="header" data-theme="b" >
 			<img src="images/logo.png" alt="" id="logo"/>
 			<h4 id="headerTxt">My Players</h4>
 		</div>
-		<div data-role="collapsible" data-collapsed="true" data-theme="b" >
+		
+	<div data-role="content">
+		<div class="ui-grid-a">
+			<div class="ui-block-a">
+				<ul data-role="listview" class="ui-li-icon" data-theme="b" data-inset="true">
+					<li><img src="images/playerphoto.png" id="playerImg"/>
+						<aside>
+							<ul data-role="controlgroup">
+								<li><p>Tony Romo</p></li>
+								<li><p>QB</p></li>
+								<li><p>Dallas Cowboys</p></li>
+							</ul>
+						</aside>
+					</li>
+					<li><img src="images/playerphoto.png" id="playerImg"/>
+						<aside>
+							<ul data-role="controlgroup">
+								<li><p>Aaron Rogers</p></li>
+								<li><p>QB</p></li>
+								<li><p>Green Bay Packers</p></li>
+							</ul>
+						</aside>
+					</li>
+				</ul>
+			</div>
+			<div class="ui-block-b">
+				<ul data-role="listview" class="ui-li-icon" data-theme="b" data-inset="true">
+					<li><img src="images/playerphoto.png" id="playerImg"/>
+						<aside>
+							<ul data-role="controlgroup">
+								<li><p>Adrian Peterson</p></li>
+								<li><p>RB</p></li>
+								<li><p>Minnessota Vikings</p></li>
+							</ul>
+						</aside>
+					</li>
+					<li><img src="images/playerphoto.png" id="playerImg"/>
+						<aside>
+							<ul data-role="controlgroup">
+								<li><p>Arian Foster</p></li>
+								<li><p>RB</p></li>
+								<li><p>Houston Texans</p></li>
+							</ul>
+						</aside>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+		
+		<!--<div data-role="collapsible" data-collapsed="true" data-theme="b" >
 			<h2 id="myPlayersCollapse">My Players</h2>
 			<ul data-role="listview" class="ui-li-icon" data-theme="b" data-filter="true" data-inset="true">
 				<li id="topPlayerLi"><img src="images/playerphoto.png" id="playerImg"/>
@@ -121,22 +207,13 @@
 					</aside>
 				</li>
 			</ul>
-		</div>
-		<!------------------My Leagues Drop Down-------------------->
-		<div data-role="collapsible" data-theme="b">
-			<h2>My Leagues</h2>
-			<ul data-role="listview">
-				<li><a href="#comingSoon" data-ajax="false">League 1</a></li>
-				<li><a href="#comingSoon" data-ajax="false">League 2</a></li>
-			</ul>
-		</div>
-		
+		</div>-->
 		<div data-role="footer" data-position="fixed" data-theme-content="b">
 			<nav data-role="navbar" >
 				<ul data-theme="b">
-					<li><a href="#home" data-theme="b" data-transition="flip">Home</a></li>
-					<li><a href="gold/index.html" data-theme="b" data-transition="flip">Gold</a></li>
-					<li><a href="bronze/index.html"  data-ajax="false" data-theme="b">Bronze</a></li>
+					<li><a href="http://jemcphe.github.com/Miu-Site/week2/master/index.html" data-theme="b" data-transition="turn">Home</a></li>
+					<li><a href="http://jemcphe.github.com/Miu-Site/week2/gold/index.html" data-ajax="false" data-theme="b" >Gold</a></li>
+					<li><a href="http://jemcphe.github.com/Miu-Site/week2/bronze/index.html"  data-ajax="false" data-theme="b">Bronze</a></li>
 				</ul>
 			</nav>			
 		</div>	
@@ -164,9 +241,9 @@
 			<div data-role="footer" data-position="fixed" data-theme-content="b">
 				<nav data-role="navbar" >
 					<ul data-theme="b">
-						<li><a href="#home" data-theme="b" data-transition="flip">Home</a></li>
-						<li><a href="gold/index.html" data-theme="b" data-transition="flip">Gold</a></li>
-						<li><a href="bronze/index.html"  data-ajax="false" data-theme="b">Bronze</a></li>
+						<li><a href="http://jemcphe.github.com/Miu-Site/week2/master/index.html" data-theme="b" data-transition="turn">Home</a></li>
+						<li><a href="http://jemcphe.github.com/Miu-Site/week2/gold/index.html" data-ajax="false" data-theme="b" >Gold</a></li>
+						<li><a href="http://jemcphe.github.com/Miu-Site/week2/bronze/index.html"  data-ajax="false" data-theme="b">Bronze</a></li>
 					</ul>
 				</nav>			
 			</div>	
@@ -178,16 +255,43 @@
 				<h4 id="headerTxt">League News</h4>
 			</div>
 			
-			<div data-role="collapsible" >
-				<h2>Injuries</h2>
+			<div data-role="content">
+				<ul data-role="listview" data-theme="b">
+					<li data-role="list-divider">From Around The NFL</li>
+					<li>
+						<h3><a href="#comingSoon">Notre Dame pro day could valut Floyd Past Blackmon</a></h3>
+						<p>about 20 minutes ago via nfl.com</p>
+					</li>
+					<li>
+						<h3><a href="#comingSoon">Report: Colts might take RG3 over Luck for No. 1 pick</a></h3>
+						<p>about 45 minutes ago via yahoo sports</p>
+					</li>
+					<li>
+						<h3><a href="#comingSoon">Manning Mentor: Colts should draft Luck and "never look back"</a></h3>
+						<p>about 1 hour ago via espn.com</p>
+					</li>
+					<li>
+						<h3><a href="#comingSoon">Browns to host QB Tannehil, RB Richardson, other prospects</a></h3>
+						<p>about 2 hours ago via nfl.com</p>
+					</li>
+					<li data-role="list-divider">Injuries</li>
+					<li>
+						<h3><a href="#comingSoon">Several Patriots out for a stretch</a></h3>
+						<p>about 2 days ago via nfl.com</p>
+					</li>
+					<li>
+						<h3><a href="#comingSoon">Peyton Hillis making a comeback after season long injuries</a></h3>
+						<p>about 3 days ago via Cincinnati Gazette</p>
+					</li>
+				</ul>
 			</div>
 			
 			<div data-role="footer" data-position="fixed" data-theme-content="b">
 				<nav data-role="navbar" >
 					<ul data-theme="b">
-						<li><a href="#home" data-theme="b" data-transition="flip">Home</a></li>
-						<li><a href="gold/index.html" data-theme="b" data-transition="flip">Gold</a></li>
-						<li><a href="bronze/index.html"   data-theme="b">Bronze</a></li>
+						<li><a href="http://jemcphe.github.com/Miu-Site/week2/master/index.html" data-theme="b" data-transition="turn">Home</a></li>
+						<li><a href="http://jemcphe.github.com/Miu-Site/week2/gold/index.html" data-ajax="false" data-theme="b" >Gold</a></li>
+						<li><a href="http://jemcphe.github.com/Miu-Site/week2/bronze/index.html"  data-ajax="false" data-theme="b">Bronze</a></li>
 					</ul>
 				</nav>			
 			</div>	
