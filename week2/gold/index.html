@@ -4,7 +4,7 @@
 
 	<meta charset="utf-8">
 	
-	<title>Gold Application</title>
+	<title>MIU Demo</title>
 	
 	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
 	<meta name="HandheldFriendly" content="True">
@@ -16,37 +16,18 @@
 	
 	<!-- StyleSheets under here -->
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
-	<link rel="stylesheet" href="css/gold.css" />
+	<!--<link rel="stylesheet" href="css/gold.css" />-->
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
 
 </head>
 <body>
-<!------------------------------Home Page--------------------------->
-	<div data-role="page" id="home" data-theme="a">
-		
-		<div data-role="header" data-theme="b">
-			<img src="images/logo.png" alt="" id="logo"/>
-			<h4 id="headerTxt">Home</h4>
-		</div>
-		
-		<div data-role="content" data-theme="a">
-				<ul data-role='listview' data-theme="b" data-filter="true" data-inset="true">
-					<a href="addPlayer.html" data-ajax="false"><img src="images/calltoaction.png" alt="" id="CTA"/></a>
-					<li>
-						<a href="#players">My Players</a>
-					</li>
-					<li>
-						<a href="#proj">Projections</a>
-					</li>
-					<li>
-						<a href="#news">League News</a>
-					</li>
 
-				</ul>
-		</div>
+	<div data-role="page" id="home">
 		
+		<div data-role="header" class="header">
+			<h1><img src="images/logo.png" id="logo" alt="" /></h1>
 		<div data-role="footer" data-position="fixed" data-theme-content="b">
 			<nav data-role="navbar" >
 				<ul data-theme="b">
@@ -63,74 +44,18 @@
 			<img src="images/logo.png" alt="" id="logo"/>
 			<h4 id="headerTxt">My Players</h4>
 		</div>
-		<div data-role="collapsible" data-collapsed="true" data-theme="b" >
-			<h2 id="myPlayersCollapse">My Players</h2>
-			<ul data-role="listview" class="ui-li-icon" data-theme="b" data-filter="true" data-inset="true">
-				<li id="topPlayerLi"><img src="images/playerphoto.png" id="playerImg"/>
-					<aside>
-						<ul data-role="controlgroup">
-							<li>Name: 		Tony Romo</li>
-							<li>Position: 	QB</li>
-							<li>Team: 		Dallas Cowboys</li>
-						</ul>
-					</aside>
-				</li>
-				<li><img src="images/playerphoto.png" id="playerImg"/>
-					<aside>
-						<ul data-role="controlgroup">
-							<li>Name: 		Adrian Peterson</li>
-							<li>Position: 	RB</li>
-							<li>Team: 		Minnessota Vikings</li>
-						</ul>
-					</aside>
-				</li>
-				<li><img src="images/playerphoto.png" id="playerImg"/>
-					<aside>
-						<ul data-role="controlgroup">
-							<li>Name: 		Larry Fitzgerald</li>
-							<li>Position: 	WR</li>
-							<li>Team: 		Arizona Cardinals</li>
-						</ul>
-					</aside>
-				</li>
-				<li><img src="images/playerphoto.png" id="playerImg"/>
-					<aside>
-						<ul data-role="controlgroup">
-							<li>Name: 		Rob Gronkowski</li>
-							<li>Position: 	TE</li>
-							<li>Team: 		New England Patriots</li>
-						</ul>
-					</aside>
-				</li>
-				<li><img src="images/playerphoto.png" id="playerImg"/>
-					<aside>
-						<ul data-role="controlgroup">
-							<li>Name: 		Garret Hartley</li>
-							<li>Position: 	K</li>
-							<li>Team: 		New Orleans Saints</li>
-						</ul>
-					</aside>
-				</li>
-				<li><img src="images/playerphoto.png" id="playerImg"/>
-					<aside>
-						<ul data-role="controlgroup">
-							<li>Name: 		SanFrancisco 49ers</li>
-							<li>Position: 	DEF</li>
-							<li>Team: 		SanFrancisco 49ers</li>
-						</ul>
-					</aside>
-				</li>
-			</ul>
-		</div>
-		<!------------------My Leagues Drop Down-------------------->
-		<div data-role="collapsible" data-theme="b">
-			<h2>My Leagues</h2>
-			<ul data-role="listview">
-				<li><a href="#comingSoon" data-ajax="false">League 1</a></li>
-				<li><a href="#comingSoon" data-ajax="false">League 2</a></li>
-			</ul>
-		</div>
 		
+		<div data-role="content">
+			<a href="addPlayer.html" data-ajax="false"><img src="images/calltoaction.png"/></a>
+			<ul data-role="listview" data-filter="true">
+				<li><a href="comingSoon.html" data-ajax="false" >My Players</a></li>
+				<li><a href="#" >My Leagues</a></li>
+				<li><a href="#" >Projections</a></li>
+				<li><a href="#" >News</a></li>
+				<li><a href="#" >Injuries</a></li>
+			</ul>
+		</div>
+	
 		<div data-role="footer" data-position="fixed" data-theme-content="b">
 			<nav data-role="navbar" >
 				<ul data-theme="b">
@@ -230,7 +155,6 @@
 					<li><a href="#home" data-role="button" data-transition="flip">Home</a></li>
 				</ul>
 			</div>
-			
 	</div>
 
 	<!-- JavaScript under here -->
