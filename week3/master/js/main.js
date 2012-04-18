@@ -193,7 +193,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		var item = JSON.parse(value);
 		
 		//show the form
-		toggleControls("on");
+		toggleControls("off");
 		
 		//populate form fields with current localStorage values
 		$('position').value = item.position[1];
