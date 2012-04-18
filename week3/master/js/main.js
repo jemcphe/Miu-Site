@@ -30,7 +30,7 @@
 window.addEventListener("DOMContentLoaded", function() {
 	
 	//getElementById function
-	function jm(x){
+	function $(x){
 		var theElement = document.getElementById(x);
 		return theElement;
 	};
@@ -39,7 +39,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	//Create select field element and populate with options.
 	function makeDropDown() {
 		var 	formTag = document.getElementsByTagName("form"), //formTag is an array of all the form tags.
-				selectLi = jm("select"),
+				selectLi = $("select"),
 				//Create <select></select> element
 				makeSelect = document.createElement("select");
 				makeSelect.setAttribute("id", "position");
@@ -56,8 +56,8 @@ window.addEventListener("DOMContentLoaded", function() {
 	
 	//Find value of selected radio button.
 	function getCheckboxValue(){
-		if(jm('starter').checked) {
-			starterValue = jm("starter").value;
+		if($('starter').checked) {
+			starterValue = $("starter").value;
 		}else {
 			starterValue = "No";
 		}
@@ -66,17 +66,17 @@ window.addEventListener("DOMContentLoaded", function() {
 	function toggleControls(n){
 		switch(n){
 			case"on":
-				jm('addPlayerForm').style.display = "none";
-				jm('clear').style.display = "inline";
-				jm('display').style.display = "none";
-				jm('addNew').style.display = "inline";
+				$('addPlayerForm').style.display = "none";
+				$('clear').style.display = "inline";
+				$('display').style.display = "none";
+				$('addNew').style.display = "inline";
 				break;
 			case "off":
-				jm('addPlayerForm').style.display = "block";
-				jm('clear').style.display = "inline";
-				jm('display').style.display = "inline";
-				jm('addNew').style.display = "none";
-				jm('players').style.display = "none";
+				$('addPlayerForm').style.display = "block";
+				$('clear').style.display = "inline";
+				$('display').style.display = "inline";
+				$('addNew').style.display = "none";
+				$('players').style.display = "none";
 				break;
 			default:
 				return false;
@@ -98,13 +98,13 @@ window.addEventListener("DOMContentLoaded", function() {
 		// gather up all our form field values and store in an object.
 		// Object properties contain array with the form label and input value.
 		var item = {};
-				item.position				= ["Position:", jm('position').value];
-				item.pname					= ["Player Name:", jm('pname').value];
-				item.team					= ["Team Name:", jm('team').value];
-				item.bye						= ["Bye Week:", jm('byeweek').value];
+				item.position				= ["Position:", $('position').value];
+				item.pname					= ["Player Name:", $('pname').value];
+				item.team					= ["Team Name:", $('team').value];
+				item.bye						= ["Bye Week:", $('byeweek').value];
 				item.starter					= ["Starter:", starterValue];
-				item.skill						= ["Skill Level:", jm('skill').value];
-				item.notes					= ["Notes:", jm('notes').value];
+				item.skill						= ["Skill Level:", $('skill').value];
+				item.notes					= ["Notes:", $('notes').value];
 		//Save Data into Local Storage: Use Stringify to convert our object to a string.
 		localStorage.setItem(id, JSON.stringify(item));
 		alert("Player Saved!");
@@ -122,7 +122,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		document.body.appendChild(makeDiv);
 		var makeList = document.createElement('ul');
 		makeDiv.appendChild(makeList);
-		jm('players').style.display = "display";
+		$('players').style.display = "display";
 		for(var i=0, j=localStorage.length; i<j; i++) {
 			var makeLi = document.createElement('li');
 			var linksLi = document.createElement('li');
@@ -196,21 +196,21 @@ window.addEventListener("DOMContentLoaded", function() {
 		toggleControls("on");
 		
 		//populate form fields with current localStorage values
-		jm('position').value = item.position[1];
-		jm('pname').value = item.pname[1];
-		jm('team').value = item.team[1];
-		jm('byeweek').value = item.bye[1];
+		$('position').value = item.position[1];
+		$('pname').value = item.pname[1];
+		$('team').value = item.team[1];
+		$('byeweek').value = item.bye[1];
 		if(item.starter[1] == "Yes") {
-			jm('starter').setAttribute("checked", "checked");
+			$('starter').setAttribute("checked", "checked");
 		}
-		jm('skill').value = item.skill[1];
-		jm('notes').value = item.notes[1];
+		$('skill').value = item.skill[1];
+		$('notes').value = item.notes[1];
 		
 		//Remove the initial listener from the input 'save contact' button.
 		saveLink.removeEventListener("click", storeData);
 		//Change submit button value to "Edit Player"
-		jm('submit').value = "Edit Player";
-		var editSubmit = jm('submit');
+		$('submit').value = "Edit Player";
+		var editSubmit = $('submit');
 		//Save the key value established in this function as a property of the editSubmit event
 		//So we can use that value when we save the data we edited.
 		editSubmit.addEventListener("click", validate);
@@ -242,9 +242,9 @@ window.addEventListener("DOMContentLoaded", function() {
 	
 	function validate (e) {
 		//Define the elements we want to check
-		var getPosition = jm('position');
-		var getPname = jm('pname');
-		var getTeam = jm('team');
+		var getPosition = $('position');
+		var getPname = $('pname');
+		var getTeam = $('team');
 		
 		//Reset Error Mesages
 		errMsg.innerHTML = "";
@@ -291,16 +291,16 @@ window.addEventListener("DOMContentLoaded", function() {
 	//variable defaults
 	var 	positions = ["--Select Position--", "QB", "RB", "WR", "TE", "K", "DEF"],
 			starterValue = "No",
-			errMsg = jm('errors');
+			errMsg = $('errors');
 ;
 	makeDropDown();
 	
 	//Set Link & submit Click Events
-	var displayLink = jm('display');
+	var displayLink = $('display');
 	displayLink.addEventListener("click", getData);
-	var clearLink = jm('clear');
+	var clearLink = $('clear');
 	clearLink.addEventListener("click", clearLocal);
-	var saveLink = jm("submit");
+	var saveLink = $("submit");
 	saveLink.addEventListener("click", validate);
 	
 });
