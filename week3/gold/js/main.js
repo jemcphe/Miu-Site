@@ -5,42 +5,64 @@
  * 03/15/2012
  */
 
+// jQuery Function
+
+	var parseAddPlayerForm = function(data) {
+		//uses form data here;
+		console.log(data);
+	};
+	
+	$(document).ready(function() {
+		
+		var apform = $('#addPlayerForm');
+		
+		apform.validate({
+			invalidHandler: function(form, validator) {},
+			submitHandler: function() {
+				var data = apform.serializeArray();
+				parseAddPlayerForm(data);
+			}
+		});
+		
+	});
+
+
 // Wait until the DOM is ready.
 window.addEventListener("DOMContentLoaded", function() {
 	
 	//getElementById function
-	function $(x){
-		var theElement = document.getElementById(x);
-		return theElement;
-	};
+	// function $(x){
+		// var theElement = document.getElementById(x);
+		// return theElement;
+	// };
 	
 	
 	//Create select field element and populate with options.
-	function makeDropDown() {
-		var 	formTag = document.getElementsByTagName("form"), //formTag is an array of all the form tags.
-				selectLi = $("select"),
-				//Create <select></select> element
-				makeSelect = document.createElement("select");
-				makeSelect.setAttribute("id", "position");
-		//Loop through and populate option elements		
-		for(var i=0, j=positions.length; i<j; i++){
-			var makeOption = document.createElement("option");
-			var optText = positions[i];
-			makeOption.setAttribute("value", optText);
-			makeOption.innerHTML = optText;
-			makeSelect.appendChild(makeOption);
-		}
-		selectLi.appendChild(makeSelect);
-	};
+	// function makeDropDown() {
+		// var 	formTag = document.getElementsByTagName("form"), //formTag is an array of all the form tags.
+				// selectLi = $("select"),
+				// //Create <select></select> element
+				// makeSelect = document.createElement("select");
+				// makeSelect.setAttribute("id", "position");
+		// //Loop through and populate option elements		
+		// for(var i=0, j=positions.length; i<j; i++){
+			// var makeOption = document.createElement("option");
+			// var optText = positions[i];
+			// makeOption.setAttribute("value", optText);
+			// makeOption.innerHTML = optText;
+			// makeSelect.appendChild(makeOption);
+		// }
+		// //selectLi.appendChild(makeSelect);
+	// };
 	
 	//Find value of selected radio button.
-	function getCheckboxValue(){
-		if($('starter').checked) {
-			starterValue = $("starter").value;
-		}else {
-			starterValue = "No";
-		}
-	}
+	// function getCheckboxValue(){
+		// if($('starter').checked) {
+			// starterValue = $("starter").value;
+		// }else {
+			// starterValue = "No";
+		// }
+	// }
 	//Toggle ON/OFF used for displaying data
 	function toggleControls(n){
 		switch(n){
@@ -73,7 +95,7 @@ window.addEventListener("DOMContentLoaded", function() {
 			//to the validate function, and then passed here, into the storeData function.
 			id = key;
 		}
-		getCheckboxValue();
+		//getCheckboxValue();
 		// gather up all our form field values and store in an object.
 		// Object properties contain array with the form label and input value.
 		var item = {};
@@ -192,7 +214,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		var editSubmit = $('submit');
 		//Save the key value established in this function as a property of the editSubmit event
 		//So we can use that value when we save the data we edited.
-		editSubmit.addEventListener("click", validate);
+		editSubmit.addEventListener("click", validator);
 		editSubmit.key = this.key;
 	}
 	
@@ -219,7 +241,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		}
 	}
 	
-	function validate (e) {
+/*	function validate (e) {
 		//Define the elements we want to check
 		var getPosition = $('position');
 		var getPname = $('pname');
@@ -271,8 +293,8 @@ window.addEventListener("DOMContentLoaded", function() {
 	var 	positions = ["--Select Position--", "QB", "RB", "WR", "TE", "K", "DEF"],
 			starterValue = "No",
 			errMsg = $('errors');
-;
-	makeDropDown();
+;*/
+	//makeDropDown();
 	
 	//Set Link & submit Click Events
 	var displayLink = $('display');
@@ -280,5 +302,8 @@ window.addEventListener("DOMContentLoaded", function() {
 	var clearLink = $('clear');
 	clearLink.addEventListener("click", clearLocal);
 	var saveLink = $("submit");
-	saveLink.addEventListener("click", validate);
+	saveLink.addEventListener("click", validator);
+	
 });
+
+

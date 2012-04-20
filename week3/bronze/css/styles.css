@@ -137,6 +137,10 @@ footer a:active {
 #players img {
 	width: 100%;
 }
+.hints {
+	font-size: 10px;
+	margin: 5px;
+}
 /******************Coming Soon Page**************/
 #soon {
 	width: 320px;

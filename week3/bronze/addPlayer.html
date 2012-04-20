@@ -32,6 +32,9 @@
 		</header>
 		<!--Begin Form, fieldset, and legend-->
 		<form action="#" method="post" id="addPlayerForm">
+			<!--Submit Button-->
+			<input type="submit" value="Add Player" id="submit"/>
+			
 			<fieldset id="addPlayerFieldset"> <!--Creates box around containing material-->
 				<legend>Player Info</legend>
 				<ul id="errors"></ul>
@@ -51,37 +54,39 @@
 					<!--Name Field w/ text input-->
 					<li>
 						<label for="pname">Player Name:</label>
-						<input type="text" id="pname" />
+						<input type="text" id="pname" placeholder="ex. Tony Romo"/>
+						<p class="hints">Player Name Goes Here</p>
 					</li>
 					<!--Team Name-->
 					<li>
 						<label for="team">Team Name:</label>
-						<input type="text" id="team" />
+						<input type="text" id="team" placeholder="ex. Dallas Cowboys"/>
+						<p class="hints">Team Name Goes Here</p>
 					</li>
-					<!--Player Skill w/ range slider-->
+					
+					<!--Bye Week w/ date box-->
 					<li>
 						<label for="byeweek">Bye Week:</label>
-						<input type="date" id="byeweek" />
+						<input type="date" id="byeweek" value="10/01/2012"/>
 					</li>
 					<!--Starter? w/ checkbox-->
 					<li>
 						<label for="starter">Starter:</label>
 						<input type="checkbox" id="starter" value="Yes" class="checkbox" />
 					</li>
-					<!--Bye Week w/ date box-->
+					<!--Player Skill w/ range slider-->
 					<li>
 						<label for="skill">Player Skill:</label>
-						<input type="range" min="1" max="10" id="skill" />
+						<input type="range" min="1" max="10" value="10" id="skill" />
 					</li>
 					<!--Notes w/ box for additional user text-->
 					<li>
 						<label for="notes">Notes:</label>
-						<textarea id="notes"></textarea>
+						<textarea id="notes" placeholder="Comments here...">This guy is really good</textarea>
 					</li>
 				</ul>
 			</fieldset>
-			<!--Submit Button-->
-			<input type="submit" value="Add Player" id="submit"/>
+			
 		</form>
 		<footer id="footer">
 			<a href="#" id="clear">Clear Stored Data</a>
