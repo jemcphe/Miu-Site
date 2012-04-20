@@ -29,4 +29,8 @@
 label.error {
 	display: block;
 	margin: 10px 0;
+	color: orange;
+}
+.hints {
+	font-size: 10px;
 }

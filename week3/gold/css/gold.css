@@ -22,3 +22,15 @@
 #comingSoon {
 	width: 100%;
 }
+#addPlayerFieldset {
+	margin-right: 10px;
+	margin-left: 10px;
+}
+label.error {
+	display: block;
+	margin: 10px 0;
+	color: orange;
+}
+.hints {
+	font-size: 10px;
+}

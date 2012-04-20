@@ -22,8 +22,8 @@
 		
 	});
 
-// Wait until the DOM is ready.
-//window.addEventListener("DOMContentLoaded", function() {
+//Wait until the DOM is ready.
+window.addEventListener("DOMContentLoaded", function() {
 	
 	function getCheckboxValue(){
 		if($('starter').checked) {
@@ -61,6 +61,26 @@
 		// alert("Player Saved!");
 	};
 	
+	//function to clear data from localStorage
+	function clearLocal() {
+		if(localStorage.length === 0) {
+			alert("There is no data to clear.");
+		}else{
+			localStorage.clear();
+			alert("All Players have been deleted!");
+			window.location.reload();
+			return false;
+		}
+		var clearLink = $('#clear');
+		clearLink.addEventListener("click", clearLocal);
+	};	
+	//Set Link & submit Click Events
+	// var displayLink = $('display');
+	// displayLink.addEventListener("click", getData);
+	// var clearLink = $('clear');
+	// clearLink.addEventListener("click", clearLocal);
+// 	
 	// var saveLink = $("submit");
 	// saveLink.addEventListener("click", storeData());
 
+});
