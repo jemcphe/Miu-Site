@@ -99,13 +99,13 @@ window.addEventListener("DOMContentLoaded", function() {
 		// gather up all our form field values and store in an object.
 		// Object properties contain array with the form label and input value.
 		var item = {};
-				item.position				= ["Position:", $('position').value];
-				item.pname					= ["Player Name:", $('pname').value];
-				item.team					= ["Team Name:", $('team').value];
-				item.bye						= ["Bye Week:", $('byeweek').value];
+				item.position				= ["Position:", $('#position').value];
+				item.pname					= ["Player Name:", $('#pname').value];
+				item.team					= ["Team Name:", $('#team').value];
+				item.bye						= ["Bye Week:", $('#byeweek').value];
 				item.starter					= ["Starter:", starterValue];
-				item.skill						= ["Skill Level:", $('skill').value];
-				item.notes					= ["Notes:", $('notes').value];
+				item.skill						= ["Skill Level:", $('#skill').value];
+				item.notes					= ["Notes:", $('#notes').value];
 		//Save Data into Local Storage: Use Stringify to convert our object to a string.
 		localStorage.setItem(id, JSON.stringify(item));
 		alert("Player Saved!");
