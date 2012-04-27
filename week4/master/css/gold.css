@@ -1,10 +1,12 @@
 #logo {
-	margin-right: 35%;
-	margin-left: 35%;
-	width: 30%;
+	margin-right: 40%;
+	margin-left: 40%;
+	width: 20%;
+	height: 30px;
 	
 }
 #headerTxt {
+	font-size: 12px;
 	padding: 0px;
 	margin-top: 0px;
 	margin-bottom: 5px;
