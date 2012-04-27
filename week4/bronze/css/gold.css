@@ -1,0 +1,27 @@
+#logo {
+	margin-right: 25%;
+	margin-left: 25%;
+	width: 50%;
+	height: 100px;
+}
+#headerTxt {
+	padding: 0px;
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+#CTA {
+	width: 100%;
+	margin-bottom: 5px;
+}
+#topPlayerLi {
+	margin-top: 15px;
+}
+#myPlayersCollapse {
+	margin-bottom: 5px;
+}
+#comingSoon {
+	width: 100%;
+}
+.ui-body-e, .ui-dialog.ui-overlay-e {
+	background: #eee000;
+}
